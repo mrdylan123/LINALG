@@ -14,7 +14,7 @@ Vector::~Vector()
 
 void Vector::drawVector(SDL_Renderer& renderer)
 {
-	SDL_RenderDrawLine(&renderer, 300, 300, 300 + x * 60, 300 + y * -60);
+	SDL_RenderDrawLine(&renderer, 300, 300, 300 + x * 60, 300 + y * -60); // Window is 600x600 so multiply by 60
 }
 
 void Vector::Multiply(int scale)

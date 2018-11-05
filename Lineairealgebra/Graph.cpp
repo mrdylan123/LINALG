@@ -17,6 +17,7 @@ void Graph::draw(SDL_Renderer& renderer)
 	SDL_RenderDrawLine(&renderer, 0, 300, 600, 300); // X-axis
 	SDL_RenderDrawLine(&renderer, 300, 0, 300, 600); // Y-axis
 
+	// Get all vectors and draw them aswell
 	for(Vector* vector : vectors)
 	{
 		vector->drawVector(renderer);

@@ -14,11 +14,11 @@ int main()
 		Vector v2{ 2, -2 };
 		Vector v3{ -7, -8 };
 		Vector v4{ 0, 0 };
-		v3.add(v1);
-		v4.subtract(v1);
+		v3.add(v1); // Add v1 to v3 (-4, -5)
+		v4.subtract(v1); // Subtract v1 from v4 (-3, -3)
+		v2.Multiply(2); // Multiply by 2 (4, -4)
 
-		v2.Multiply(2);
-
+		// Add the vectors to the list from graph, drawing them afterwards.
 		graph.addVector(&v1);
 		graph.addVector(&v2);
 		graph.addVector(&v3);
