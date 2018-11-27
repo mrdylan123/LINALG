@@ -43,32 +43,32 @@ void Vector::subtract(Vector& vector)
 	y_ -= vector.y_;
 }
 
-int Vector::x() const
+double Vector::x() const
 {
 	return x_;
 }
 
-void Vector::setX(int x)
+void Vector::setX(double x)
 {
 	x_ = x;
 }
 
-void Vector::setY(int y)
+void Vector::setY(double y)
 {
 	y_ = y;
 }
 
-int Vector::y() const
+double Vector::y() const
 {
 	return y_;
 }
 
-int Vector::pixelX() const
+double Vector::pixelX() const
 {
 	return 300 + x_ * 60;
 }
 
-int Vector::pixelY() const
+double Vector::pixelY() const
 {
 	return 300 + y_ * -60;
 }

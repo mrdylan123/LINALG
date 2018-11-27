@@ -27,7 +27,7 @@ int main()
 
 		Vector middle{ 1, 1 };
 
-		graph.scaleFromPoint(2, 2, middle);
+		graph.rotateFromPoint(-45, middle);
 
 		if (SDL_CreateWindowAndRenderer(600, 600, 0, &window, &renderer) == 0) {
 			SDL_bool done = SDL_FALSE;

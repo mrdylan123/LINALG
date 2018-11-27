@@ -13,12 +13,12 @@ public:
 	Matrix operator*(Vector const& vector);
 	Matrix operator*(Matrix const& other);
 
-	std::vector<std::vector<int>>* elems();
-	void setValue(int x, int y, int value);
+	std::vector<std::vector<double>>* elems();
+	void setValue(int x, int y, double value);
 private:
 	int rows_;
 	int cols_;
-	std::vector<std::vector<int>> elems_;
+	std::vector<std::vector<double>> elems_;
 };
 
 

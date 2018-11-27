@@ -15,6 +15,8 @@ public:
 	void scale(int factorX, int factorY);
 	void scaleFromPoint(int factorX, int factorY, Vector& point);
 	void translate(int xDirection, int yDirection);
+	void rotate(int degrees);
+	void rotateFromPoint(int degrees, Vector& point);
 
 private:
 	std::vector<Vector*> vectors;

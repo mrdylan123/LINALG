@@ -1,5 +1,7 @@
 #include "Graph.h"
 #include "Matrix.h"
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 
 Graph::Graph()
@@ -86,4 +88,30 @@ void Graph::translate(int xDirection, int yDirection)
 		vector->setX((*result.elems())[0][0]);
 		vector->setY((*result.elems())[0][1]);
 	}
+}
+
+void Graph::rotate(int degrees)
+{
+	Matrix rotationMatrix = Matrix{ 2, 2 };
+
+	const double radians = static_cast<double>(degrees) / 180.0 * static_cast<double>(M_PI);
+
+	rotationMatrix.setValue(0, 0, cos(radians));
+	rotationMatrix.setValue(0, 1, -sin(radians));
+	rotationMatrix.setValue(1, 0, sin(radians));
+	rotationMatrix.setValue(1, 1, cos(radians));
+
+	for (auto& vector : vectors)
+	{
+		Matrix result = rotationMatrix * *vector;
+		vector->setX((*result.elems())[0][0]);
+		vector->setY((*result.elems())[1][0]);
+	}
+}
+
+void Graph::rotateFromPoint(int degrees, Vector& point)
+{
+	translate(-point.x(), -point.y());
+	rotate(degrees);
+	translate(point.x(), point.y());
 }

@@ -4,12 +4,12 @@
 
 Matrix::Matrix(int rows, int cols ) : rows_{ rows }, cols_{ cols }
 {
-	elems_ = std::vector<std::vector<int>>{};
+	elems_ = std::vector<std::vector<double>>{};
 	elems_.resize(rows);
 
 	for (int y = 0; y < rows; y++)
 	{
-		elems_[y] = std::vector<int>{};
+		elems_[y] = std::vector<double>{};
 		elems_[y].resize(cols);
 	}
 }
@@ -72,12 +72,12 @@ Matrix Matrix::operator*(Matrix const& other)
 	return result;
 }
 
-std::vector<std::vector<int>>* Matrix::elems()
+std::vector<std::vector<double>>* Matrix::elems()
 {
 	return &elems_;
 }
 
-void Matrix::setValue(int x, int y, int value)
+void Matrix::setValue(int x, int y, double value)
 {
 	elems_[x][y] = value;
 }
