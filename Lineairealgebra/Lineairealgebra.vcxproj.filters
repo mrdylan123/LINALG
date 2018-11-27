@@ -4,9 +4,11 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="Matrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graph.h" />
     <ClInclude Include="Vector.h" />
+    <ClInclude Include="Matrix.h" />
   </ItemGroup>
 </Project>
